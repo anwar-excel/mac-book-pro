@@ -12,9 +12,9 @@ function calculateTotal() {
     const deliveryCost = document.getElementById('deliveryCharge').innerText;
     const bestPrice = document.getElementById('bestPrice').innerText;
     const totalPrice = document.getElementById('totalPrice');
-    const totalOverall = document.getElementById('totalOverall');
+    const totalcost = document.getElementById('totalcost');
     totalPrice.innerText = parseInt(memoryCost) + parseInt(ssdCost) + parseInt(deliveryCost) + parseInt(bestPrice);
-    totalOverall.innerText = totalPrice.innerText;
+    totalcost.innerText = totalPrice.innerText;
 }
 // memory 
 // memory 
@@ -27,13 +27,13 @@ document.getElementById('memory16GB').addEventListener('click', function () {
 })
 // ssd 
 // ssd 
-document.getElementById('ssd256GB').addEventListener('click', function () {
+document.getElementById('ssd256').addEventListener('click', function () {
     priceOfProduct('extraStorage', 0);
 })
-document.getElementById('ssd512GB').addEventListener('click', function () {
+document.getElementById('ssd512').addEventListener('click', function () {
     priceOfProduct('extraStorage', 100);
 })
-document.getElementById('ssd1TB').addEventListener('click', function () {
+document.getElementById('ssd1').addEventListener('click', function () {
     priceOfProduct('extraStorage', 180);
 })
 // delivery 
@@ -50,12 +50,12 @@ document.getElementById('delivery20').addEventListener('click', function () {
 document.getElementById('promoBtn').addEventListener('click', function () {
     const promoField = document.getElementById('promoField');
     const totalPrice = document.getElementById('totalPrice');
-    const totalOverall = document.getElementById('totalOverall');
+    const totalcost = document.getElementById('totalcost');
     const discount = parseInt(totalPrice.innerText) * 0.2;
     if (promoField.value == 'stevekaku') {
-        totalOverall.innerText = parseInt(totalPrice.innerText) - discount;
+        totalcost.innerText = parseInt(totalPrice.innerText) - discount;
     } else {
-        totalOverall.innerText = parseInt(totalPrice.innerText);
+        totalcost.innerText = parseInt(totalPrice.innerText);
     }
     promoField.value = '';
 })
