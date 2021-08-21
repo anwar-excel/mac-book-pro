@@ -1,10 +1,4 @@
-.container{
-    margin-top: 20px;
-}
-.half-width{
-    width:80%
-    
-}
-.margin{
-    margin: 15px;
+
+body{
+    scroll-behavior: smooth;
 }
